@@ -496,4 +496,45 @@ export default {
             }
         })
     },
+    async getSensitiveInfoForCollections(){
+        return await request({
+            url: '/api/getSensitiveInfoForCollections',
+            method: 'post',
+            data:{},
+        })
+    },
+
+    async getCoverageInfoForCollections(){
+        return await request({
+            url: '/api/getCoverageInfoForCollections',
+            method: 'post',
+            data:{},
+        })
+    },
+
+    async getSeverityInfoForCollections(){
+        return await request({
+            url: '/api/getSeverityInfoForCollections',
+            method: 'post',
+            data:{},
+        })
+    },
+
+    async getLastTrafficSeen(){
+        return await request({
+            url: '/api/getLastSeenTrafficInfoForCollections',
+            method: 'post',
+            data:{},
+        })
+    },
+
+    async getLastTestedSeverityInfo(apiCollectionId) {
+        return await request({
+            url: '/api/fetchSeverityInfoForEndpoints',
+            method: 'post',
+            data: {
+                apiCollectionId: apiCollectionId
+            }
+        })
+    },
 }
