@@ -27,10 +27,6 @@ jobs:
         java-version: '8'
         distribution: 'temurin'
         cache: maven
-    - name: npm install
-      run: |
-        cd apps/dashboard 
-        npm install
     - name: Build with Maven
       run: mvn clean install
 
